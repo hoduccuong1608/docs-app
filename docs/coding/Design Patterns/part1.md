@@ -33,4 +33,12 @@ Khái niệm về **patterns** lần đầu tiên được mô tả bởi Christ
 
 Kể từ đó, hàng chục **patterns** hướng đối tượng khác đã được khám phá. **"Phương pháp patterns"** trở nên rất phổ biến trong các lĩnh vực lập trình khác, vì vậy nhiều **patterns** khác nay cũng tồn tại ngoài thiết kế hướng đối tượng.
 
-**Nguồn:** [Refactoring.guru](https://refactoring.guru/design-patterns)
+## Tại sao nên biết Design pattern?
+
+Sự thật là bạn có thể làm lập trình viên trong nhiều năm mà không biết về một **pattern** nào. Rất nhiều người làm điều đó. Tuy nhiên, ngay cả trong trường hợp đó, bạn có thể đang triển khai một số mẫu mà không hề biết. Vậy tại sao bạn lại dành thời gian để học chúng?
+
+**Design pattern** là một bộ công cụ gồm các giải pháp đã được thử nghiệm và kiểm tra cho các vấn đề phổ biến trong thiết kế phần mềm. Ngay cả khi bạn chưa bao giờ gặp phải những vấn đề này, việc biết **Design pattern** vẫn hữu ích vì nó dạy bạn cách giải quyết mọi loại vấn đề bằng cách sử dụng các nguyên tắc thiết kế hướng đối tượng.
+
+**Design pattern** xác định một ngôn ngữ chung mà bạn và đồng đội của mình có thể sử dụng để giao tiếp hiệu quả hơn. Bạn có thể nói: “Ồ, chỉ cần sử dụng Singleton cho việc đó” và mọi người sẽ hiểu ý tưởng đằng sau đề xuất của bạn. Không cần phải giải thích singleton là gì nếu bạn biết mẫu và tên của nó.
+
+**Nguồn:** [Refactoring](https://refactoring.guru/design-patterns)
