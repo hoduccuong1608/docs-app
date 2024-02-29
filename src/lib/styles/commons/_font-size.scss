@@ -1,0 +1,13 @@
+// _font-size.scss
+$font-sizes: (
+  small: 0.75rem,
+  normal: 1rem,
+  large: 1.25rem,
+  x-large: 1.5rem,
+);
+
+@each $name, $size in $font-sizes {
+  .lgo-fs-#{$name} {
+    font-size: $size;
+  }
+}

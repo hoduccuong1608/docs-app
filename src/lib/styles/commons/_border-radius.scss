@@ -1,0 +1,14 @@
+// _border-radius.scss
+$border-radii: (
+  none: 0,
+  small: 0.125rem,
+  medium: 0.25rem,
+  large: 0.5rem,
+  round: 50%,
+);
+
+@each $name, $size in $border-radii {
+  .lgo-br-#{$name} {
+    border-radius: $size;
+  }
+}

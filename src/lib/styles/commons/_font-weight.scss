@@ -1,0 +1,14 @@
+// _font-weight.scss
+$font-weights: (
+  light: 300,
+  normal: 400,
+  medium: 500,
+  bold: 700,
+  bolder: 900,
+);
+
+@each $name, $weight in $font-weights {
+  .lgo-fw-#{$name} {
+    font-weight: $weight;
+  }
+}

@@ -6,6 +6,7 @@ const config: Config = {
   title: "Docs",
   tagline: "Dinosaurs are cool",
   favicon: "img/docs.png",
+  plugins: ["docusaurus-plugin-sass"],
 
   // Set the production url of your site here
   url: "https://your-docusaurus-site.example.com",
@@ -49,7 +50,7 @@ const config: Config = {
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: "./src/lib/styles/styles.scss",
         },
       } satisfies Preset.Options,
     ],

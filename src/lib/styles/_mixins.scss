@@ -1,0 +1,7 @@
+// _mixins.scss
+@mixin button-variant($bgColor, $textColor) {
+  background-color: $bgColor;
+  color: $textColor;
+  border: 1px solid darken($bgColor, 10%);
+  // Thêm các thuộc tính khác
+}

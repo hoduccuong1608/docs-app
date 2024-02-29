@@ -74,18 +74,18 @@ private static volatile DatabaseConnector instance;
 
 Ví dụ trên đảm bảo rằng chỉ có một instance của **DatabaseConnector** được tạo, ngay cả trong môi trường đa luồng, mà không cần đồng bộ hóa mọi lần truy cập phương thức `getInstance()`.
 
-1. Kiểm Tra Lần Đầu (First Check)
-   if (instance == null): Phương thức kiểm tra trước tiên xem thể hiện (instance) của DatabaseConnector đã tồn tại chưa. Nếu đã tồn tại, nó sẽ trả về ngay lập tức, tránh việc phải thực hiện khóa đồng bộ, giúp tăng hiệu suất bởi vì hầu hết các lần truy cập sau đó đều không cần tạo thể hiện mới.
+1. Kiểm Tra Lần Đầu (**First Check**)
+   `if (instance == null)`: Phương thức kiểm tra trước tiên xem thể hiện (instance) của **DatabaseConnector** đã tồn tại chưa. Nếu đã tồn tại, nó sẽ trả về ngay lập tức, tránh việc phải thực hiện khóa đồng bộ, giúp tăng hiệu suất bởi vì hầu hết các lần truy cập sau đó đều không cần tạo thể hiện mới.
 
-2. Đồng Bộ Hóa (Synchronization)
-   synchronized (DatabaseConnector.class): Nếu instance là null, tức là chưa có thể hiện nào được tạo, phương thức tiếp tục bằng cách đồng bộ hóa một khối mã trên class DatabaseConnector. Điều này đảm bảo rằng chỉ một luồng có thể thực hiện khối mã bên trong tại một thời điểm, ngăn chặn việc tạo thêm thể hiện từ các luồng khác.
+2. Đồng Bộ Hóa (**Synchronization**)
+   `synchronized` (**DatabaseConnector.class**): Nếu instance là `null`, tức là chưa có thể hiện nào được tạo, phương thức tiếp tục bằng cách đồng bộ hóa một khối mã trên class **DatabaseConnector**. Điều này đảm bảo rằng chỉ một luồng có thể thực hiện khối mã bên trong tại một thời điểm, ngăn chặn việc tạo thêm thể hiện từ các luồng khác.
 
-3. Kiểm Tra Lần Hai (Second Check)
-   if (instance == null): Sau khi vào được khối đồng bộ, phương thức lại kiểm tra instance một lần nữa. Kiểm tra này cần thiết vì trong thời gian chờ đợi để vào được khối đồng bộ, một luồng khác có thể đã tạo thể hiện và gán cho instance. Kiểm tra lần hai đảm bảo rằng thể hiện thực sự chưa được tạo trước khi tạo mới.
+3. Kiểm Tra Lần Hai (**Second Check**)
+   `if (instance == null)`: Sau khi vào được khối đồng bộ, phương thức lại kiểm tra instance một lần nữa. Kiểm tra này cần thiết vì trong thời gian chờ đợi để vào được khối đồng bộ, một luồng khác có thể đã tạo thể hiện và gán cho instance. Kiểm tra lần hai đảm bảo rằng thể hiện thực sự chưa được tạo trước khi tạo mới.
 4. Tạo Thể Hiện Mới
-   instance = new DatabaseConnector(): Nếu instance vẫn là null sau kiểm tra lần hai, thể hiện mới của DatabaseConnector được tạo và gán cho instance.
+   instance = **new DatabaseConnector()**: Nếu instance vẫn là `null` sau kiểm tra lần hai, thể hiện mới của **DatabaseConnector** được tạo và gán cho instance.
    Trả Về Thể Hiện
-   return instance: Cuối cùng, thể hiện của DatabaseConnector (mới tạo hoặc đã tồn tại) được trả về cho caller.
+   `return instance`: Cuối cùng, thể hiện của **DatabaseConnector** (mới tạo hoặc đã tồn tại) được trả về cho `caller`.
 
 ## Ưu và Nhược điểm
 
@@ -97,13 +97,13 @@ Ví dụ trên đảm bảo rằng chỉ có một instance của **DatabaseConn
 
 ### Nhược điểm:
 
-- Vi phạm nguyên tắc Single Responsibility Principle, khiến class vừa quản lý việc tạo instance vừa phải thực hiện nhiệm vụ chính của mình.
+- Vi phạm nguyên tắc **Single Responsibility Principle**, khiến class vừa quản lý việc tạo instance vừa phải thực hiện nhiệm vụ chính của mình.
 - Khó khăn trong việc kiểm thử do phụ thuộc vào instance duy nhất, làm giảm tính linh hoạt và tái sử dụng của code.
 - Có thể gây ra vấn đề trong môi trường đa luồng nếu không cẩn thận trong việc đồng bộ hóa.
 
 ## Ứng dụng Thực tế
 
-Singleton Pattern thường được sử dụng trong các trường hợp như quản lý kết nối cơ sở dữ liệu, logger, cấu hình ứng dụng, hoặc quản lý cache. Mỗi trong những tình huống này đều yêu cầu một thể hiện duy nhất để quản lý trạng thái và hành vi chung cho toàn bộ ứng dụng.
+**Singleton Pattern** thường được sử dụng trong các trường hợp như quản lý kết nối cơ sở dữ liệu, **logger**, cấu hình ứng dụng, hoặc quản lý **cache**. Mỗi trong những tình huống này đều yêu cầu một thể hiện duy nhất để quản lý trạng thái và hành vi chung cho toàn bộ ứng dụng.
 
 ## Kết Luận
 
