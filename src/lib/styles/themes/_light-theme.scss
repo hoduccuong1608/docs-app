@@ -1,5 +1,3 @@
-// _variables-light.scss
-
 // Màu nền
 $light-background-color: #ffffff;
 $light-background-color-secondary: #f0f2f5; // Màu nền phụ
@@ -22,3 +20,14 @@ $light-success-color: #4caf50;
 // Màu bổ sung
 $light-info-color: #17a2b8;
 $light-link-color: #007bff;
+
+// Thêm màu cho hover và active
+$light-hover-color: #e0e0e0; // Màu khi hover
+$light-active-color: #c0c0c0; // Màu khi active
+
+// Màu hover cho các màu thông báo
+$light-primary-hover-color: darken($light-primary-color, 10%);
+$light-success-hover-color: darken($light-success-color, 10%);
+$light-danger-hover-color: darken($light-danger-color, 10%);
+$light-warning-hover-color: darken($light-warning-color, 10%);
+$light-info-hover-color: darken($light-info-color, 10%);

@@ -8,7 +8,7 @@ export default function Home(): JSX.Element {
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
-      <Button size="medium" content="Hello"></Button>
+      <Button>Hello</Button>
     </Layout>
   );
 }

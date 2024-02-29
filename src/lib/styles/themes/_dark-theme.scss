@@ -1,5 +1,3 @@
-// _variables-dark.scss
-
 // Màu nền
 $dark-background-color: #001f3f;
 $dark-background-color-secondary: #023e8a; // Màu nền phụ
@@ -22,3 +20,14 @@ $dark-success-color: #4caf50; // Xanh lá cây neon
 // Màu bổ sung
 $dark-info-color: #48cae4;
 $dark-link-color: #0096c7;
+
+// Thêm màu cho hover và active
+$dark-hover-color: #030d1a; // Màu khi hover, một phiên bản tối hơn của $dark-background-color
+$dark-active-color: #02060d; // Màu khi active, một phiên bản tối hơn của $dark-hover-color
+
+// Màu hover cho các màu thông báo
+$dark-primary-hover-color: lighten($dark-primary-color, 10%);
+$dark-success-hover-color: lighten($dark-success-color, 10%);
+$dark-danger-hover-color: lighten($dark-danger-color, 10%);
+$dark-warning-hover-color: lighten($dark-warning-color, 10%);
+$dark-info-hover-color: lighten($dark-info-color, 10%);

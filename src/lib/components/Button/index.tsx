@@ -1,56 +1,34 @@
 import React from "react";
-import PropTypes from "prop-types";
-import "./button.scss";
+import { ButtonProps } from "../../interface/ButtonProps";
 
-const Button = ({
-  type,
-  variant,
+const Button: React.FC<ButtonProps> = ({
+  type = "button",
+  variant = "primary",
+  size = "medium",
+  className = "",
   style,
-  className,
   onClick,
-  content,
   disabled,
-  size,
+  children,
+  leftIcon, // Sử dụng leftIcon
+  rightIcon, // Sử dụng rightIcon
 }) => {
-  const classNameFinal = `${className} lgo-btn lgo-btn-${variant} lgo-btn-${size} ${
-    disabled ? "disabled" : ""
-  }`;
+  const classNameFinal = `lgo-btn lgo-btn-${variant} ${
+    size ? `lgo-btn-${size}` : ""
+  } ${className} ${disabled ? "disabled" : ""}`;
+
   return (
     <button
       type={type}
-      style={style}
       className={classNameFinal}
-      onClick={onClick}>
-      {content}
+      style={style}
+      onClick={onClick}
+      disabled={disabled}>
+      {leftIcon && <span className="lgo-btn-icon left">{leftIcon}</span>}
+      {children}
+      {rightIcon && <span className="lgo-btn-icon right">{rightIcon}</span>}
     </button>
   );
-};
-
-Button.propTypes = {
-  type: PropTypes.string,
-  variant: PropTypes.oneOf([
-    "primary",
-    "secondary",
-    "success",
-    "danger",
-    "outline",
-  ]),
-  size: PropTypes.oneOf(["small", "medium", "large"]),
-  style: PropTypes.object,
-  className: PropTypes.string,
-  onClick: PropTypes.func,
-  content: PropTypes.node.isRequired,
-  disabled: PropTypes.bool,
-};
-
-Button.defaultProps = {
-  type: "button", // 'submit', 'reset', cũng có thể sử dụng
-  variant: "primary",
-  style: {},
-  className: "",
-  onClick: () => {},
-  content: "Button",
-  disabled: false,
 };
 
 export default Button;

@@ -1,51 +1,53 @@
 @import "themes/themes";
 
 /* Định nghĩa các biến cho light theme */
+// Định nghĩa các biến CSS dựa trên các biến SCSS đã được tính toán
 :root {
   --background-color: #{$light-background-color};
   --background-color-secondary: #{$light-background-color-secondary};
   --background-color-tertiary: #{$light-background-color-tertiary};
-
   // Màu văn bản
   --text-color: #{$light-text-color};
   --text-color-secondary: #{$light-text-color-secondary};
-  --text-color-tertiary: #{$light-text-color-tertiary}; // Màu văn bản bậc ba
-
+  --text-color-tertiary: #{$light-text-color-tertiary};
   // Màu outline
   --outline-color: #{$light-outline-color};
-
-  // Màu thông báo
+  // Màu thông báo và hover
   --warning-color: #{$light-warning-color};
+  // --warning-hover-color: #{$light-warning-color-hover};
   --primary-color: #{$light-primary-color};
+  // --primary-hover-color: #{$light-primary-color-hover};
   --danger-color: #{$light-danger-color};
+  // --danger-hover-color: #{$light-danger-color-hover};
   --success-color: #{$light-success-color};
-
-  // Màu bổ sung
+  // --success-hover-color: #{$light-success-color-hover};
   --info-color: #{$light-info-color};
+  // --info-hover-color: #{$light-info-color-hover};
   --link-color: #{$light-link-color};
+  // --link-hover-color: #{$light-link-color-hover};
 }
 
-/* Định nghĩa các biến cho dark theme */
 [data-theme="dark"] {
   --background-color: #{$dark-background-color};
   --background-color-secondary: #{$dark-background-color-secondary};
   --background-color-tertiary: #{$dark-background-color-tertiary};
-
   // Màu văn bản
   --text-color: #{$dark-text-color};
   --text-color-secondary: #{$dark-text-color-secondary};
-  --text-color-tertiary: #{$dark-text-color-tertiary}; // Màu văn bản bậc ba
-
+  --text-color-tertiary: #{$dark-text-color-tertiary};
   // Màu outline
   --outline-color: #{$dark-outline-color};
-
-  // Màu thông báo
+  // Màu thông báo và hover
   --warning-color: #{$dark-warning-color};
+  // --warning-hover-color: #{$dark-warning-color-hover};
   --primary-color: #{$dark-primary-color};
+  // // --primary-hover-color: #{$dark-primary-color-hover};
   --danger-color: #{$dark-danger-color};
+  // // --danger-hover-color: #{$dark-danger-color-hover};
   --success-color: #{$dark-success-color};
-
-  // Màu bổ sung
+  // // --success-hover-color: #{$dark-success-color-hover};
   --info-color: #{$dark-info-color};
+  // // --info-hover-color: #{$dark-info-color-hover};
   --link-color: #{$dark-link-color};
+  // // --link-hover-color: #{$dark-link-color-hover};
 }

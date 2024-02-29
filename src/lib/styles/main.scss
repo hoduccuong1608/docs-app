@@ -1,6 +1,7 @@
 @import "variables";
 @import "mixins";
 @import "./commons/commons";
+@import "../components/component";
 
 :root {
   --ifm-color-primary: #2e8555;
