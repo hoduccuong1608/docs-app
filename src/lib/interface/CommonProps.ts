@@ -2,6 +2,7 @@ export interface CommonProps {
   id?: string;
   key?: string;
   className?: string;
+  rounded?: string;
   style?: React.CSSProperties;
   size?: string;
   type?: string;

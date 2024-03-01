@@ -1,33 +1,38 @@
 // Màu nền
-$dark-background-color: #001f3f;
-$dark-background-color-secondary: #023e8a; // Màu nền phụ
-$dark-background-color-tertiary: #03045e; // Màu nền bậc ba
+$dark-background-color: #1a1a2e; // Xám đậm, gần như đen
+$dark-background-color-secondary: #16213e; // Xám đậm hơn với một chút xanh
+$dark-background-hover: lighten(#1a1a2e, 5%); // Hover cho màu nền chính
+$dark-background-secondary-hover: lighten(#16213e, 5%); // Hover cho màu nền phụ
+
+// Màu chủ đạo và màu nhấn
+$dark-primary-color: #0f3460; // Xanh dương đậm, sang trọng
+$dark-accent-color: #e94560; // Đỏ hồng, làm màu nhấn
+$dark-primary-hover: darken(#0f3460, 10%); // Hover cho màu chủ đạo
+$dark-accent-hover: darken(#e94560, 10%); // Hover cho màu nhấn
+$dark-outline-color: #16213e; // Màu viền
 
 // Màu văn bản
-$dark-text-color: #f5f5f5;
-$dark-text-color-secondary: #c9d1d9; // Màu văn bản phụ
-$dark-text-color-tertiary: #b1b7c1; // Màu văn bản bậc ba
-
-// Màu outline
-$dark-outline-color: #424242;
+$dark-text-color: #e8e8e8; // Gần trắng, cho độ tương phản cao
+$dark-text-color-secondary: #a9a9a9; // Xám nhạt
+$dark-text-hover: darken(#e8e8e8, 10%); // Hover cho màu văn bản chính
+$dark-text-secondary-hover: darken(#a9a9a9, 10%); // Hover cho màu văn bản phụ
+$dark-link-color: #e94560; // Màu đỏ hồng cho liên kết
+$dark-link-hover: lighten(#e94560, 10%); // Sáng hơn khi hover
 
 // Màu thông báo
-$dark-warning-color: #ffeb3b;
-$dark-primary-color: #8a2be2; // Tím neon
-$dark-danger-color: #ff79c6; // Hồng neon
-$dark-success-color: #4caf50; // Xanh lá cây neon
+$dark-info-color: #0f3460; // Màu xanh dương thông tin
+$dark-warning-color: #ffd32a; // Màu vàng cảnh báo
+$dark-danger-color: #e94560; // Màu đỏ nguy hiểm
+$dark-success-color: #05c46b; // Màu xanh lá cây thành công
+$dark-info-hover: lighten(#0f3460, 10%); // Hover cho màu thông báo - Thông tin
+$dark-warning-hover: darken(#ffd32a, 10%); // Hover cho màu thông báo - Cảnh báo
+$dark-danger-hover: lighten(
+  #e94560,
+  10%
+); // Hover cho màu thông báo - Nguy hiểm
+$dark-success-hover: darken(
+  #05c46b,
+  10%
+); // Hover cho màu thông báo - Thành công
 
-// Màu bổ sung
-$dark-info-color: #48cae4;
-$dark-link-color: #0096c7;
-
-// Thêm màu cho hover và active
-$dark-hover-color: #030d1a; // Màu khi hover, một phiên bản tối hơn của $dark-background-color
-$dark-active-color: #02060d; // Màu khi active, một phiên bản tối hơn của $dark-hover-color
-
-// Màu hover cho các màu thông báo
-$dark-primary-hover-color: lighten($dark-primary-color, 10%);
-$dark-success-hover-color: lighten($dark-success-color, 10%);
-$dark-danger-hover-color: lighten($dark-danger-color, 10%);
-$dark-warning-hover-color: lighten($dark-warning-color, 10%);
-$dark-info-hover-color: lighten($dark-info-color, 10%);
+$dark-inverted-text-color: #1a1a2e; // Xám đậm cho độ tương phản cao khi cần

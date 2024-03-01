@@ -5,6 +5,8 @@ const Button: React.FC<ButtonProps> = ({
   type = "button",
   variant = "primary",
   size = "medium",
+  rounded = "medium",
+  outline,
   className = "",
   style,
   onClick,
@@ -15,6 +17,8 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   const classNameFinal = `lgo-btn lgo-btn-${variant} ${
     size ? `lgo-btn-${size}` : ""
+  } ${rounded ? `lgo-rounded-${rounded}` : ""} ${
+    outline ? `lgo-btn-outline` : ""
   } ${className} ${disabled ? "disabled" : ""}`;
 
   return (
@@ -24,9 +28,9 @@ const Button: React.FC<ButtonProps> = ({
       style={style}
       onClick={onClick}
       disabled={disabled}>
-      {leftIcon && <span className="lgo-btn-icon left">{leftIcon}</span>}
+      {leftIcon && <>{leftIcon}</>}
       {children}
-      {rightIcon && <span className="lgo-btn-icon right">{rightIcon}</span>}
+      {rightIcon && <>{rightIcon}</>}
     </button>
   );
 };

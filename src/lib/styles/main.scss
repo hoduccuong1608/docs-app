@@ -26,3 +26,25 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.disabled {
+  position: relative; // Đảm bảo rằng .disabled có position relative để ::before định vị chính xác
+  cursor: not-allowed;
+
+  &::before {
+    position: absolute; // Đặt ::before tương đối với .disabled
+    left: -2;
+    top: -2;
+    width: 105%;
+    height: 110%;
+    content: "";
+    background-color: var(--disabled-color);
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 4px;
+  }
+}

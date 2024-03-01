@@ -2,9 +2,11 @@ import { CommonProps } from "./CommonProps";
 
 export interface ButtonProps extends CommonProps {
   type?: "button" | "submit" | "reset";
-  variant?: "primary" | "secondary" | "success" | "danger" | "outline";
+  variant?: "primary" | "secondary" | "success" | "danger";
+  outline?: boolean;
   size?: "small" | "medium" | "large";
-  leftIcon?: React.ReactNode; // Đổi thành leftIcon
-  rightIcon?: React.ReactNode; // Thêm rightIcon
+  rounded?: "none" | "small" | "medium" | "large" | "full";
+  leftIcon?: React.ReactNode;
+  rightIcon?: React.ReactNode;
   disabled?: boolean;
 }
