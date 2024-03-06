@@ -3,7 +3,7 @@ import { ButtonProps } from "../../interface/ButtonProps";
 
 const Button: React.FC<ButtonProps> = ({
   type = "button",
-  variant = "primary",
+  variant = "default",
   size = "medium",
   rounded = "medium",
   outline,
@@ -12,8 +12,8 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   disabled,
   children,
-  leftIcon, // Sử dụng leftIcon
-  rightIcon, // Sử dụng rightIcon
+  leftIcon,
+  rightIcon,
 }) => {
   const classNameFinal = `lgo-btn lgo-btn-${variant} ${
     size ? `lgo-btn-${size}` : ""

@@ -4,89 +4,57 @@
 :root {
   // Màu nền
   --background-color: #{$light-background-color};
-  --background-color-secondary: #{$light-background-color-secondary};
-  --background-hover: #{$light-background-hover};
-  --background-secondary-hover: #{$light-background-secondary-hover};
+  --background-primary-color: #{$light-background-primary-color};
 
   // Màu văn bản
   --text-color: #{$light-text-color};
-  --text-color-secondary: #{$light-text-color-secondary};
-  --text-hover: #{$light-text-hover};
-  --text-secondary-hover: #{$light-text-secondary-hover};
+  --sub-text-color: #{$light-sub-text-color};
+  --title-color: #{$light-title-color};
 
   // Màu outline
   --outline-color: #{$light-outline-color};
 
   // Màu thông báo và hover
   --info-color: #{$light-info-color};
-  --info-hover: #{$light-info-hover};
   --warning-color: #{$light-warning-color};
-  --warning-hover: #{$light-warning-hover};
   --danger-color: #{$light-danger-color};
-  --danger-hover: #{$light-danger-hover};
   --success-color: #{$light-success-color};
-  --success-hover: #{$light-success-hover};
 
   // Màu chủ đạo và hover
   --primary-color: #{$light-primary-color};
-  --primary-hover: #{$light-primary-hover};
   --accent-color: #{$light-accent-color};
-  --accent-hover: #{$light-accent-hover};
 
   // Màu liên kết và hover
-  --link-color: #{$light-link-color};
-  --link-hover: #{$light-link-hover};
 
   --disabled-color: rgba(255, 255, 255, 0.4);
 
-  --shadow1-color: rgba(0, 0, 0, 0.1);
-  --shadow2-color: rgba(0, 0, 0, 0.15);
-  --shadow3-color: rgba(0, 0, 0, 0.2);
-
-  --inverted-text-color: #{$light-inverted-text-color};
+  --shadow-color: rgba(0, 0, 0, 0.5);
 }
 
 [data-theme="dark"] {
   // Màu nền
   --background-color: #{$dark-background-color};
-  --background-color-secondary: #{$dark-background-color-secondary};
-  --background-hover: #{$dark-background-hover};
-  --background-secondary-hover: #{$dark-background-secondary-hover};
+  --background-primary-color: #{$dark-background-primary-color};
 
   // Màu văn bản
   --text-color: #{$dark-text-color};
-  --text-color-secondary: #{$dark-text-color-secondary};
-  --text-hover: #{$dark-text-hover};
-  --text-secondary-hover: #{$dark-text-secondary-hover};
+  --sub-text-color: #{$dark-sub-text-color};
+  --title-color: #{$dark-title-color};
 
   // Màu outline
   --outline-color: #{$dark-outline-color};
 
   // Màu thông báo và hover
   --info-color: #{$dark-info-color};
-  --info-hover: #{$dark-info-hover};
   --warning-color: #{$dark-warning-color};
-  --warning-hover: #{$dark-warning-hover};
   --danger-color: #{$dark-danger-color};
-  --danger-hover: #{$dark-danger-hover};
   --success-color: #{$dark-success-color};
-  --success-hover: #{$dark-success-hover};
 
   // Màu chủ đạo và hover
   --primary-color: #{$dark-primary-color};
-  --primary-hover: #{$dark-primary-hover};
   --accent-color: #{$dark-accent-color};
-  --accent-hover: #{$dark-accent-hover};
-
-  // Màu liên kết và hover
-  --link-color: #{$dark-link-color};
-  --link-hover: #{$dark-link-hover};
 
   --disabled-color: rgba(0, 0, 0, 0.1);
 
-  --shadow1-color: rgba(255, 255, 255, 0.1);
-  --shadow2-color: rgba(255, 255, 255, 0.15);
-  --shadow3-color: rgba(255, 255, 255, 0.2);
-
-  --inverted-text-color: #{$dark-inverted-text-color};
+  --shadow-color: rgba(255, 255, 255, 0.5);
 }

@@ -1,27 +1,5 @@
 // _mixins.scss
 
-@mixin lgo-padding($values...) {
-  @if length($values) == 1 {
-    $value: nth($values, 1);
-    padding: $value;
-  } @else if length($values) == 2 {
-    $vert: nth($values, 1);
-    $horz: nth($values, 2);
-    padding: $vert $horz;
-  } @else if length($values) == 3 {
-    $top: nth($values, 1);
-    $horz: nth($values, 2);
-    $bottom: nth($values, 3);
-    padding: $top $horz $bottom;
-  } @else if length($values) == 4 {
-    $top: nth($values, 1);
-    $right: nth($values, 2);
-    $bottom: nth($values, 3);
-    $left: nth($values, 4);
-    padding: $top $right $bottom $left;
-  }
-}
-
 @mixin lgo-font($size, $weight: normal, $line-height: 1.6) {
   font-size: $size;
   font-weight: $weight;
@@ -30,31 +8,6 @@
 
 @mixin lgo-border($width: 1px, $style: solid, $color: var(--outline-color)) {
   border: $width $style $color;
-}
-
-@mixin lgo-hover-effect($opacity: 0.9) {
-  &:hover {
-    opacity: $opacity;
-  }
-}
-
-@mixin lgo-size-btn($size) {
-  @if $size == small {
-    font-size: 0.8rem;
-    font-weight: 500;
-    padding: 0.4rem 0.8rem;
-    width: 5rem; // Chiều rộng cho size small
-  } @else if $size == medium {
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    width: 7rem; // Chiều rộng cho size medium
-  } @else if $size == large {
-    font-size: 1.2rem;
-    font-weight: 700;
-    padding: 0.6rem 1.2rem;
-    width: 10rem; // Chiều rộng cho size large
-  }
 }
 
 @mixin lgo-rounded-btn($rounded: none) {
@@ -100,42 +53,6 @@
 //   @include color-gradient(radial-gradient, circle at center, #ff477e, #ff5c5c, #ffc952);
 // }
 
-@mixin lgo-box-shadow($size) {
-  $shadow: null; // Initialize shadow variable
-
-  // Determine the shadow value based on the size
-  @if $size == "small" {
-    $shadow: 2px 2px 4px var(--shadow1-color);
-  } @else if $size == "medium" {
-    $shadow: 2px 2px 5px var(--shadow2-color);
-  } @else if $size == "large" {
-    $shadow: 2px 4px 6px var(--shadow3-color);
-  }
-
-  // Apply the shadow if not null
-  @if $shadow != null {
-    box-shadow: $shadow;
-  }
-}
-
-// Define a mixin for button variants
-@mixin lgo-button-outline($variant-name) {
-  $color: null; // Initialize color variable
-
-  // Determine the color based on the variant name
-  @if $variant-name == "primary" {
-    $color: var(--primary-color);
-  } @else if $variant-name == "secondary" {
-    $color: var(--background-color-secondary);
-  } @else if $variant-name == "success" {
-    $color: var(--success-color);
-  } @else if $variant-name == "danger" {
-    $color: var(--danger-color);
-  }
-
-  // Apply the styles if color is not null
-  @if $color != null {
-    border-color: $color;
-    color: $color;
-  }
+%lgo-box-shadow {
+  box-shadow: 1px 1px 3px var(--shadow-color);
 }

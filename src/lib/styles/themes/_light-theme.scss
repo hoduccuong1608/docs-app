@@ -1,44 +1,19 @@
 // Màu nền
-$light-background-color: #ffffff; // Màu trắng tinh
-$light-background-color-secondary: #f4f6f8; // Màu xám rất nhạt
-$light-background-hover: lighten(#ffffff, 5%); // Hover cho màu nền chính
-$light-background-secondary-hover: lighten(
-  #f4f6f8,
-  5%
-); // Hover cho màu nền phụ
+$light-background-color: #e9ecef;
+$light-background-primary-color: #ffffff;
 
 // Màu chủ đạo và màu nhấn
-$light-primary-color: #2979ff; // Màu xanh dương sáng
-$light-accent-color: #5393ff; // Màu xanh dương nhạt hơn
-$light-primary-hover: darken(#2979ff, 10%); // Hover cho màu chủ đạo
-$light-accent-hover: darken(#5393ff, 10%); // Hover cho màu nhấn
-$light-outline-color: #e0e0e0; // Màu viền nhạt
+$light-primary-color: #007bff;
+$light-accent-color: #50e3c2;
+$light-outline-color: #dee2e6;
 
 // Màu văn bản
-$light-text-color: #333333; // Màu xám đậm
-$light-text-color-secondary: #757575; // Màu xám
-$light-text-hover: darken(#333333, 10%); // Hover cho màu văn bản chính
-$light-text-secondary-hover: darken(#757575, 10%); // Hover cho màu văn bản phụ
-$light-link-color: #2979ff; // Màu xanh dương sáng, sử dụng cho liên kết
-$light-link-hover: darken(#2979ff, 10%); // Tối hơn khi hover
+$light-title-color: #212529;
+$light-text-color: #495057;
+$light-sub-text-color: #6c757d;
 
 // Màu thông báo
-$light-info-color: #29b6f6; // Màu xanh nước biển sáng
-$light-warning-color: #ffb74d; // Màu cam nhạt
-$light-danger-color: #ef5350; // Màu đỏ sáng
-$light-success-color: #66bb6a; // Màu xanh lá nhạt
-$light-info-hover: darken(#29b6f6, 10%); // Hover cho màu thông báo - Thông tin
-$light-warning-hover: darken(
-  #ffb74d,
-  10%
-); // Hover cho màu thông báo - Cảnh báo
-$light-danger-hover: darken(
-  #ef5350,
-  10%
-); // Hover cho màu thông báo - Nguy hiểm
-$light-success-hover: darken(
-  #66bb6a,
-  10%
-); // Hover cho màu thông báo - Thành công
-
-$light-inverted-text-color: #ffffff;
+$light-info-color: #29b6f6;
+$light-warning-color: #ffb74d;
+$light-danger-color: #ef5350;
+$light-success-color: #66bb6a;

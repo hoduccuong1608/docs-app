@@ -1,64 +1,43 @@
-// Định nghĩa cơ bản cho card
 .lgo-card {
-  background-color: var(--background-color); // Màu nền
-  border: 0.0625rem solid #ddd; // Viền mảnh
-  border-radius: 0.25rem; // Viền tròn nhẹ
-  padding: 1rem; // Khoảng cách bên trong
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); // Bóng đổ nhẹ
-  position: relative; // Cho phép nút đóng vị trí tuyệt đối
-  margin-bottom: 1rem; // Khoảng cách với card khác
-}
-
-// Phong cách cho nút đóng
-.lgo-card-close-button {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-// Tiêu đề của card
-.lgo-card-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 0.75rem; // Khoảng cách giữa tiêu đề và nội dung
-}
-
-// Nội dung của card
-.lgo-card-content {
-  font-size: 1rem;
-  color: #666; // Màu chữ
-}
-
-// Biến thể kích thước
-.lgo-card-small {
-  width: 15rem;
-}
-
-.lgo-card-medium {
-  width: 20rem;
-}
-
-.lgo-card-large {
-  width: 30rem;
-}
-
-// Biến thể viền
-.lgo-rounded-none {
-  border-radius: 0;
-}
-
-.lgo-rounded-small {
+  background-color: var(--background-primary-color);
+  border: 1px solid var(--outline-color);
   border-radius: 0.25rem;
-}
+  position: relative;
+  padding: 1rem;
 
-.lgo-rounded-medium {
-  border-radius: 0.5rem;
-}
+  // Cải thiện việc định nghĩa styles cho các thẻ con như <br> và <hr>
+  br,
+  hr {
+    margin: 1.5rem 0;
+    height: 1px;
+  }
 
-.lgo-rounded-large {
-  border-radius: 1rem;
+  // Đã đặt đúng vị trí cho &-title
+  &-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 0.5rem; // Khoảng cách từ đầu card tới tiêu đề
+  }
+
+  // Đã sửa lỗi trong việc xác định nội dung cho .lgo-card-content
+  .lgo-card-content {
+    font-size: 1rem;
+    color: var(--text-color);
+
+    // Định nghĩa styles cho các thẻ <p> bên trong .lgo-card-content
+    p {
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  // Các biến thể kích thước của card
+  &-small {
+    width: 15rem;
+  }
+  &-medium {
+    width: 20rem;
+  }
+  &-large {
+    width: 30rem;
+  }
 }

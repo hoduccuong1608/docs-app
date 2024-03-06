@@ -1,0 +1,65 @@
+.lgo-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+  overflow-y: scroll;
+}
+
+.lgo-modal-container {
+  background-color: var(--background-primary-color);
+  border-radius: 0.25rem;
+  padding: 1rem;
+  z-index: 1051;
+
+  br,
+  hr {
+    background-color: var(--outline-color);
+    margin: 1rem 0;
+  }
+}
+
+.lgo-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lgo-modal-title {
+  margin: 0;
+}
+
+.lgo-modal-close-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.lgo-modal-content {
+  margin-top: 1rem;
+}
+
+.lgo-modal-footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: end;
+}
+
+.lgo-modal-container {
+  &.lgo-modal-small {
+    width: 20rem;
+  }
+  &.lgo-modal-medium {
+    width: 30rem;
+  }
+  &.lgo-modal-large {
+    width: 40rem;
+  }
+}

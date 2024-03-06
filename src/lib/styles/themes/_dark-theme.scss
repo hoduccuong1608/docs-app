@@ -1,38 +1,19 @@
 // Màu nền
-$dark-background-color: #1a1a2e; // Xám đậm, gần như đen
-$dark-background-color-secondary: #16213e; // Xám đậm hơn với một chút xanh
-$dark-background-hover: lighten(#1a1a2e, 5%); // Hover cho màu nền chính
-$dark-background-secondary-hover: lighten(#16213e, 5%); // Hover cho màu nền phụ
+$dark-background-color: #353b48;
+$dark-background-primary-color: #3b3b3b;
 
 // Màu chủ đạo và màu nhấn
-$dark-primary-color: #0f3460; // Xanh dương đậm, sang trọng
-$dark-accent-color: #e94560; // Đỏ hồng, làm màu nhấn
-$dark-primary-hover: darken(#0f3460, 10%); // Hover cho màu chủ đạo
-$dark-accent-hover: darken(#e94560, 10%); // Hover cho màu nhấn
-$dark-outline-color: #16213e; // Màu viền
+$dark-primary-color: #9c88ff;
+$dark-accent-color: #bf37d1;
+$dark-outline-color: #5f5f5f;
 
 // Màu văn bản
-$dark-text-color: #e8e8e8; // Gần trắng, cho độ tương phản cao
-$dark-text-color-secondary: #a9a9a9; // Xám nhạt
-$dark-text-hover: darken(#e8e8e8, 10%); // Hover cho màu văn bản chính
-$dark-text-secondary-hover: darken(#a9a9a9, 10%); // Hover cho màu văn bản phụ
-$dark-link-color: #e94560; // Màu đỏ hồng cho liên kết
-$dark-link-hover: lighten(#e94560, 10%); // Sáng hơn khi hover
+$dark-title-color: #ffffff;
+$dark-text-color: #e1e1e1;
+$dark-sub-text-color: #ced4da;
 
 // Màu thông báo
-$dark-info-color: #0f3460; // Màu xanh dương thông tin
-$dark-warning-color: #ffd32a; // Màu vàng cảnh báo
-$dark-danger-color: #e94560; // Màu đỏ nguy hiểm
-$dark-success-color: #05c46b; // Màu xanh lá cây thành công
-$dark-info-hover: lighten(#0f3460, 10%); // Hover cho màu thông báo - Thông tin
-$dark-warning-hover: darken(#ffd32a, 10%); // Hover cho màu thông báo - Cảnh báo
-$dark-danger-hover: lighten(
-  #e94560,
-  10%
-); // Hover cho màu thông báo - Nguy hiểm
-$dark-success-hover: darken(
-  #05c46b,
-  10%
-); // Hover cho màu thông báo - Thành công
-
-$dark-inverted-text-color: #1a1a2e; // Xám đậm cho độ tương phản cao khi cần
+$dark-info-color: #2498ce;
+$dark-warning-color: #ffd32a;
+$dark-danger-color: #e94560;
+$dark-success-color: #05c46b;

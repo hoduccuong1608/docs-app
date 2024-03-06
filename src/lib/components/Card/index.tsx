@@ -8,24 +8,47 @@ const Card: React.FC<CardProps> = ({
   size = "medium",
   rounded = "none",
   close,
+  onClose,
+  image,
   title = "Title",
-  onClick,
+  footer,
   children,
 }) => {
+  const handleCloseClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    onClose?.();
+  };
+
+  const componentClose = () => {
+    return (
+      close && (
+        <button
+          className="lgo-card-button-close"
+          aria-label="Close card"
+          onClick={handleCloseClick}>
+          &times;
+        </button>
+      )
+    );
+  };
+
   return (
-    <div
+    <section
       id={id}
       className={`lgo-card lgo-card-${size} lgo-rounded-${rounded} ${className}`}
-      style={style}
-      onClick={onClick}>
-      {close && (
-        <button className="lgo-card-close-button" aria-label="Close card">
-          X
-        </button>
-      )}
-      {title && <div className="lgo-card-title">{title}</div>}
+      style={style}>
+      <header className="lgo-card-header">
+        {image && <img src={image} className="lgo-card-image" />}
+        {title && <h3 className="lgo-card-title">{title}</h3>}
+      </header>
+      <hr />
       <div className="lgo-card-content">{children}</div>
-    </div>
+      {footer && (
+        <>
+          <hr /> <footer className="lgo-card-footer">{footer}</footer>
+        </>
+      )}
+    </section>
   );
 };
 
